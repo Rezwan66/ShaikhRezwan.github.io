@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 	<!-- tailwind cdn -->
-	<!-- <script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
 	<script>
 		tailwind.config = {
 			theme: {
@@ -27,16 +27,20 @@
 				}
 			}
 		}
-	</script> -->
+	</script>
+	<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://kit.fontawesome.com/1428732692.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="is-preload">
 
 	<!-- Sidebar -->
 	<section id="sidebar">
-		<div class="inner">
-			<h1>Shaikh Rezwan</h1>
-			<h4>Web Developer</h4><br /><br />
+		<div class="xl:px-0 px-10 xl:block flex w-full justify-between">
+			<div class="flex justify-start flex-col my-1 cursor-pointer">
+				<h1 class="xl:text-4xl text-xl font-bold xl:mb-2">Shaikh Rezwan</h1>
+				<h4>Web Developer</h4><br /><br />
+			</div>
 			<nav>
 				<ul>
 					<li><a href="#intro">Intro</a></li>
@@ -52,10 +56,11 @@
 	<div id="wrapper">
 
 		<!-- Intro -->
-		<section id="intro" class="wrapper style1 fullscreen fade-up">
-			<div class="inner">
-				<h1>Hello! This is Shaikh Rezwan</h1>
-				<img src="images/profile.jpg" width="230" height="300" style="float:right" />
+		<section id="intro" class="wrapper style1 fullscreen fade-up min-h-screen">
+			<img class="h-60 md:block hidden" src="./images/banner.png" alt="">
+			<!-- <div class="inner">
+				<h1 class="xl:text-4xl text-xl font-bold xl:mb-2">Hello! This is Shaikh Rezwan</h1>
+				<img class="rounded-md" src="images/profile.jpg" width="230" height="300" style="float:right" />
 				<p>
 				<h3>Developer by Passion, Engineer by Mind!</h3> <br />
 				<br />Data Professional adept in problem solving,
@@ -71,87 +76,144 @@
 				<ul class="actions">
 					<li><a href="#one" class="button scrolly">Learn more</a></li>
 				</ul>
+			</div> -->
+			<div class="inner hero md:my-10">
+				<div class="hero-content flex-col lg:flex-row-reverse">
+					<img src="./images/profile.jpg"
+						class="w-52 lg:h-auto h-52 object-cover lg:rounded-lg rounded-full shadow-2xl hover:scale-110 transition" />
+					<div>
+						<h1 class="text-4xl lg:text-left text-center font-bold">Hello! This is Shaikh Rezwan</h1>
+						<p class="py-6 lg:text-left text-center">Developer by Passion, Engineer by Mind!</p>
+						<h6 class="py-6 text-white text-md">Aspiring MERN Stack Developer and Digital Engineering
+							graduate student,
+							seeking a full-time junior web developer position or internship. Eager on building effective
+							and creative user interfaces with React, HTML5, CSS3, JavaScript, Express and MongoDB.</h6>
+						<div class="flex flex-col md:flex-row gap-4 mt-6 mb-10 w-fit">
+							<a href="https://www.linkedin.com/in/shaikhrezwan/" target="_blank"
+								rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> shaikhrezwan</a>
+							<a href="https://github.com/Rezwan66" target="_blank" rel="noopener noreferrer"><i
+									class="fa-brands fa-github"></i> Rezwan66</a>
+							<a href="https://medium.com/@shaikhrezwan66" target="_blank" rel="noopener noreferrer"><i
+									class="fa-brands fa-medium"></i> shaikhrezwan66
+							</a>
+						</div>
+						<ul class="actions">
+							<li><a href="#one" class="button scrolly">Learn more</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<!-- One -->
+		<!-- One: Projects -->
 		<section id="one" class="wrapper style2 spotlights">
+			<!-- <h2>Latest Projects</h2> -->
+			<!-- explore-nest -->
 			<section>
-				<a href="#" class="image"><img src="images/Covid19.jpg" alt="" data-position="center center" /></a>
+				<a href="#" class="image"><img src="./images/1.jpg" alt="" data-position="center center" /></a>
 				<div class="content">
 					<div class="inner">
-						<h2>Analyzing Covid 19 Infections and Death Counts</h2>
-						<p>In this project we explored world Covid death counts and infection rates by cleaning and
-							evaluating the dataset from OurWorldinData using SQL Server, then Visualized the insights
-							using Tableau Public.</p>
-						<ul class="actions">
-							<li><a href="https://public.tableau.com/app/profile/shaikh.rezwan/viz/shared/YQMX5XPQ3"
-									class="button" target="_blank" rel="noopener noreferrer">Tableau Dashboard</a></li>
-							<li><a href="https://github.com/Rezwan66/PortfolioProjects/blob/main/COVID%20PortfolioProject%20v1.2.sql"
-									class="button" target="_blank" rel="noopener noreferrer">SQL Code</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section>
-				<a href="#" class="image"><img src="images/Stocks.jpg" alt="" data-position="center center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>An investigation of revenue change for Fortune500 companies</h2>
-						<p>In this project we take raw data for revenue change of Fortune 500 companies and transform it
-							using Microsoft SQL Server Management Studio to make it more usable for analysis.</p>
-						<ul class="actions">
-							<li><a href="https://github.com/Rezwan66/EDA_fortune500-companies" class="button"
-									target="_blank" rel="noopener noreferrer">View Project</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section>
-				<a href="#" class="image"><img src="images/dashboard.PNG" alt="" data-position="center center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Visualizing Data Professionals Survey Dataset</h2>
-						<p>Using Power BI, DAX functions and measures.</p>
-						<ul class="actions">
+						<h2 class="md:text-3xl text-xl font-bold mb-6">Online Tourist Guide Platform <span
+								class="text-yellow-400">✈</span></h2>
 
-							<li><a href="https://github.com/Rezwan66/PowerBI-Projects" class="button" target="_blank"
-									rel="noopener noreferrer">View Project</a>
-							</li>
+						<div class="mb-6">
+							<p>Explore Nest is an online tourist guide platform that provides comprehensive
+								information and
+								resources for travelers seeking guidance on popular destinations and booking a tour
+								package.
+							</p><br>
+							<p><strong>Technology used:</strong> React.js, JavaScript, Tailwind CSS, Daisy UI, MUI,
+								Node.js, Express.js,
+								MongoDB, Firebase SDK and Json Webtoken.</p>
+						</div>
+						<ul class="actions">
+							<li><a href="https://github.com/Rezwan66/explore-nest-client" class="button" target="_blank"
+									rel="noopener noreferrer">GitHub Client</a></li>
+							<li><a href="https://github.com/Rezwan66/explore-nest-server" class="button" target="_blank"
+									rel="noopener noreferrer">GitHub Server</a></li>
+							<li><a href="https://explore-nest.web.app/" class="button" target="_blank"
+									rel="noopener noreferrer">Live Site</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- auto-maniac -->
+			<section>
+				<a href="#" class="image"><img src="./images/car.jpg" alt="" data-position="center center" /></a>
+				<div class="content">
+					<div class="inner">
+						<h2 class="md:text-3xl text-xl font-bold mb-6">Car Brand Shop Website 🚗</h2>
+
+						<div class="mb-6">
+							<p>A simple responsive online car brand shop, created as a single page React application
+								with Firebase SDK Authentication, and backend integration using Express JS and MongoDB
+								CRUD operations.
+							</p><br>
+							<p><strong>Technology used:</strong> React.js, JavaScript, Tailwind CSS, Daisy UI,
+								Express.js, MongoDB, and Firebase SDK.</p>
+						</div>
+						<ul class="actions">
+							<li><a href="https://github.com/Rezwan66/auto-maniac-client" class="button" target="_blank"
+									rel="noopener noreferrer">GitHub Client</a></li>
+							<li><a href="https://github.com/Rezwan66/auto-maniac-server" class="button" target="_blank"
+									rel="noopener noreferrer">GitHub Server</a></li>
+							<li><a href="https://auto-maniac.web.app/" class="button" target="_blank"
+									rel="noopener noreferrer">Live Site</a></li>
 						</ul>
 					</div>
 				</div>
 			</section>
 			<section>
-				<a href="#" class="image"><img src="images/fifa.jpg" alt="" data-position="center center" /></a>
+				<a href="#" class="image"><img src="./images/1.jpg" alt="" data-position="center center" /></a>
 				<div class="content">
 					<div class="inner">
-						<h2>Exploratory Data Analysis of International Football Results</h2>
-						<p>In this project, we have analyzed international football results from 1872 to 2021 using some
-							Python Data Analysis tools such as Numpy, Pandas, Matplotlib and Seaborn to find the top
-							Home and Away Teams.</p>
+						<h2 class="md:text-3xl text-xl font-bold mb-6">Online Tourist Guide Platform 🎍</h2>
+
+						<div class="mb-6">
+							<p>Explore Nest is an online tourist guide platform that provides comprehensive
+								information and
+								resources for travelers seeking guidance on popular destinations and booking a tour
+								package.
+							</p>
+							<p><strong>Technology used:</strong> React.js, JavaScript, Tailwind CSS, Daisy UI, MUI,
+								Node.js, Express.js,
+								MongoDB, Firebase SDK and Json Webtoken.</p>
+						</div>
 						<ul class="actions">
-							<li><a href="https://github.com/Rezwan66/international-football-results-eda/blob/main/international-football-results-eda.ipynb"
-									class="button" target="_blank" rel="noopener noreferrer">Python Code</a>
-							</li>
-							<li><a href="https://medium.com/@shaikhrezwan66/international-football-results-an-exploratory-data-analysis-17fda0911d6"
-									class="button" target="_blank" rel="noopener noreferrer">Medium Blog Report</a>
-							</li>
+							<li><a href="https://github.com/Rezwan66/explore-nest-client" class="button" target="_blank"
+									rel="noopener noreferrer">GitHub Client</a></li>
+							<li><a href="https://github.com/Rezwan66/explore-nest-server" class="button" target="_blank"
+									rel="noopener noreferrer">GitHub Server</a></li>
+							<li><a href="https://explore-nest.web.app/" class="button" target="_blank"
+									rel="noopener noreferrer">Live Site</a></li>
 						</ul>
 					</div>
 				</div>
 			</section>
 			<section>
-				<a href="#" class="image"><img src="images/Robot.jpg" alt="" data-position="right center" /></a>
+				<a href="#" class="image"><img src="./images/1.jpg" alt="" data-position="center center" /></a>
 				<div class="content">
 					<div class="inner">
-						<h2>When Was the Golden Age of Video Games!</h2>
-						<p>This is a guided project completed as part of the Data Analyst in SQL Career Track from
-							DataCamp, where we have used joins and set theory to discover the best years for video
-							games!</p>
+						<h2 class="md:text-3xl text-xl font-bold mb-6">Online Tourist Guide Platform 🎍</h2>
+
+						<div class="mb-6">
+							<p>Explore Nest is an online tourist guide platform that provides comprehensive
+								information and
+								resources for travelers seeking guidance on popular destinations and booking a tour
+								package.
+							</p>
+							<p><strong>Technology used:</strong> React.js, JavaScript, Tailwind CSS, Daisy UI, MUI,
+								Node.js, Express.js,
+								MongoDB, Firebase SDK and Json Webtoken.</p>
+						</div>
 						<ul class="actions">
-							<li><a href="https://github.com/Rezwan66/When-Was-the-Golden-Age-of-Video-Games"
-									class="button" target="_blank" rel="noopener noreferrer">View Project</a></li>
+							<li><a href="https://github.com/Rezwan66/explore-nest-client" class="button" target="_blank"
+									rel="noopener noreferrer">GitHub Client</a></li>
+							<li><a href="https://github.com/Rezwan66/explore-nest-server" class="button" target="_blank"
+									rel="noopener noreferrer">GitHub Server</a></li>
+							<li><a href="https://explore-nest.web.app/" class="button" target="_blank"
+									rel="noopener noreferrer">Live Site</a></li>
 						</ul>
 					</div>
 				</div>
