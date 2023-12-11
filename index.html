@@ -30,6 +30,7 @@
 	</script>
 	<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
 	<script src="https://kit.fontawesome.com/1428732692.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body class="is-preload">
@@ -242,7 +243,7 @@
 					</p>
 				</div>
 				<ul class="actions mb-10">
-					<li><a href="./images/Resume_Shaikh_Rezwan.pdf" class="button">Show Resume</a></li>
+					<li><a href="./images/Resume_Shaikh_Rezwan.pdf" class="button" download>Download Resume</a></li>
 				</ul>
 				<!-- skills -->
 				<div class="my-6">
@@ -313,6 +314,8 @@
 							<p class="my-2">Islamic University of Technology (IUT), Bangladesh.</p>
 							<p class="my-3">Courses: C, C++ Programming, Assembly Language, Mathematics and Statistics.
 							</p>
+
+
 						</section>
 					</div>
 				</div>
@@ -322,61 +325,70 @@
 		<!-- Three -->
 		<section id="three" class="wrapper style1 fade-up">
 			<div class="inner">
-				<h2>Contact</h2>
+				<h2 class="text-3xl font-bold">Contact</h2>
 				<!-- <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p> -->
 				<div class="inner">
-					<!-- <section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section> -->
-					<section>
-						<ul class="contact">
-							<li>
-								<h3>Location</h3>
-								<span>Walther-Rathenau-Straße<br />
-									39104 Magdeburg<br />
-									Germany</span>
-							</li>
-							<li>
-								<h3>Email</h3>
-								<a href="#">shaikhrezwan66@gmail.com</a>
-							</li>
-							<!-- <li>
-											<h3>Phone</h3>
-											<span>(+49) 1789616271</span>
-										</li> -->
-							<li>
-								<h3>Social</h3>
-								<ul class="icons">
+					<div class="flex md:flex-row flex-col gap-6 md:items-center">
 
-									<li><a href="https://github.com/Rezwan66" class="icon brands fa-github"
-											target="_blank" rel="noopener noreferrer"><span
-												class="label">GitHub</span></a></li>
+						<section class="md:w-1/2">
+							<ul class="contact">
+								<li>
+									<h3>Location</h3>
+									<span>Walther-Rathenau-Straße<br />
+										39104 Magdeburg<br />
+										Germany</span>
+								</li>
+								<li>
+									<h3>Email</h3>
+									<a href="#">shaikhrezwan66@gmail.com</a>
+								</li>
+								<!-- <li>
+												<h3>Phone</h3>
+												<span>(+49) 1789616271</span>
+											</li> -->
+								<li>
+									<h3>Socials</h3>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/shaikhrezwan/"
+												class="icon brands fa-linkedin-in" target="_blank"
+												rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
 
-									<li><a href="https://www.linkedin.com/in/shaikh-rezwan-a5266354/"
-											class="icon brands fa-linkedin-in" target="_blank"
-											rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/Rezwan66" class="icon brands fa-github"
+												target="_blank" rel="noopener noreferrer"><span
+													class="label">GitHub</span></a></li>
+										<li><a href="https://medium.com/@shaikhrezwan66" class="icon brands fa-medium"
+												target="_blank" rel="noopener noreferrer"><span
+													class="label">Medium</span></a></li>
+
+
+									</ul>
+								</li>
+							</ul>
+							<button class="btn btn-secondary" onclick="showToast()">Click Me</button>
+						</section>
+						<section class="md:w-1/2">
+							<h2 class="text-xl mb-6 text-center font-bold">Enquiries</h2>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field half">
+										<label class="text-xs" for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field half">
+										<label class="text-xs" for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label class="text-xs" for="message">Message</label>
+										<textarea name="message" id="message" rows="5"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><a href="" class="button submit">Send Message</a></li>
 								</ul>
-							</li>
-						</ul>
-					</section>
+							</form>
+						</section>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -401,7 +413,18 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+	<script>
+		function showToast() {
+			Toastify({
+				text: "This is a toast notification!",
+				duration: 3000, // Set the duration in milliseconds
+				gravity: "top", // Position: "top", "bottom", "left", "right"
+				position: "right", // Alignment: "center", "left", "right"
+				backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)", // Custom background color
+			}).showToast();
+		}
+	</script>
 </body>
 
 </html>
