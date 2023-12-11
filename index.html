@@ -369,8 +369,7 @@
 						<!-- form -->
 						<section class="md:w-1/2">
 							<h2 class="text-xl mb-6 text-center font-bold">Enquiries</h2>
-							<form onsubmit="showToast()" action="https://formsubmit.co/3012b47ecfbe8cdf3283af0c9b4a6449"
-								method="POST">
+							<form action="https://formsubmit.co/3012b47ecfbe8cdf3283af0c9b4a6449" method="POST">
 								<div class="fields">
 									<div class="field half">
 										<label class="text-xs" for="name">Name</label>
@@ -378,19 +377,22 @@
 									</div>
 									<div class="field half">
 										<label class="text-xs" for="email">Email</label>
-										<input type="text" name="email" id="email" required />
+										<input type="email" name="email" id="email" required />
 									</div>
 									<div class="field">
 										<label class="text-xs" for="message">Message</label>
 										<textarea name="message" id="message" rows="5" required></textarea>
 									</div>
 									<div>
-										<input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+										<input type="hidden" name="_next"
+											value="https://rezwan66.github.io/ShaikhRezwan.github.io/thankyou.html">
+										<!-- <input type="hidden" name="_captcha" value="false"> -->
+										<input type="hidden" name="_template" value="box">
 									</div>
 								</div>
 								<ul class="actions">
 									<!-- <li><a href="" class="button submit">Send Message</a></li> -->
-									<li><button type="submit" class="button submit" onclick="">Send
+									<li><button type="submit" class="button submit">Send
 											Message</button></li>
 								</ul>
 							</form>
@@ -420,6 +422,22 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+		function sendEmail() {
+			Email.send({
+				Host: "smtp.elasticemail.com",
+				Username: "shaikhrezwan66@gmail.com",
+				Password: "EE841B7E8A4A2F02CE8900C0B77C38D08D7C",
+				To: 'shaikhrezwan66@gmail.com',
+				From: document.getElementById('email').value,
+				Subject: "New Enquiry!",
+				Body: "And this is the body"
+			}).then(
+				message => alert(message)
+			);
+		}
+	</script> -->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 	<script>
 		function showToast() {
